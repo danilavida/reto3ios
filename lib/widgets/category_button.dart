@@ -16,6 +16,7 @@ class CategoryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        minimumSize: const Size(double.infinity, 50),
         backgroundColor: AppColors.categoryColors[category],
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
         elevation: 5,
