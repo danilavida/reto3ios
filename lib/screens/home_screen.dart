@@ -33,29 +33,36 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(gradient: AppColors.backgroundGradient),
         child: Center(
-          child: Column(
+          child: // Dentro del build method, reemplaza desde el Column que contiene los botones:
+              Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Elige una categoría:', style: TextStyles.categoryTitle),
               const SizedBox(height: 30),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CategoryButton(
-                    category: 'Tecnología',
-                    onPressed: () => _navigateToCategory(context, 'Tecnología'),
-                  ),
-                  const SizedBox(height: 20),
-                  CategoryButton(
-                    category: 'Historia',
-                    onPressed: () => _navigateToCategory(context, 'Historia'),
-                  ),
-                  const SizedBox(height: 20),
-                  CategoryButton(
-                    category: 'Ciencia',
-                    onPressed: () => _navigateToCategory(context, 'Ciencia'),
-                  ),
-                ],
+              Padding(
+                // Widget nuevo que agregamos
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ), // Espacio izquierdo/derecho
+                child: Column(
+                  children: [
+                    CategoryButton(
+                      category: 'Tecnología',
+                      onPressed:
+                          () => _navigateToCategory(context, 'Tecnología'),
+                    ),
+                    const SizedBox(height: 20),
+                    CategoryButton(
+                      category: 'Historia',
+                      onPressed: () => _navigateToCategory(context, 'Historia'),
+                    ),
+                    const SizedBox(height: 20),
+                    CategoryButton(
+                      category: 'Ciencia',
+                      onPressed: () => _navigateToCategory(context, 'Ciencia'),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
