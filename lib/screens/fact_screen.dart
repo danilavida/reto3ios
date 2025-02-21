@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reto3ios/constants/text_colors.dart';
 import '../constants/app_colors.dart';
-import '../constants/text_colors.dart';
 import '../data/facts_repository.dart';
 
 class FactScreen extends StatefulWidget {

@@ -38,21 +38,22 @@ class HomeScreen extends StatelessWidget {
             children: [
               Text('Elige una categoría:', style: TextStyles.categoryTitle),
               const SizedBox(height: 30),
-              Wrap(
-                spacing: 20,
-                runSpacing: 20,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CategoryButton(
-                    category: 'Ciencia',
-                    onPressed: () => _navigateToCategory(context, 'Ciencia'),
+                    category: 'Tecnología',
+                    onPressed: () => _navigateToCategory(context, 'Tecnología'),
                   ),
+                  const SizedBox(height: 20),
                   CategoryButton(
                     category: 'Historia',
                     onPressed: () => _navigateToCategory(context, 'Historia'),
                   ),
+                  const SizedBox(height: 20),
                   CategoryButton(
-                    category: 'Tecnología',
-                    onPressed: () => _navigateToCategory(context, 'Tecnología'),
+                    category: 'Ciencia',
+                    onPressed: () => _navigateToCategory(context, 'Ciencia'),
                   ),
                 ],
               ),
